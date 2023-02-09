@@ -66,4 +66,5 @@ h1{
 #maincard{
     border: 2px solid black;
     background-color: black;
+    height: 300px;
 }

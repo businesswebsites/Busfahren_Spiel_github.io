@@ -1,8 +1,9 @@
 body{
     background-color: green;
+    overflow: hidden;
 }
 #playground{
-    height: 50vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +40,11 @@ p{
     }
     #maincard{
         height: 250px;
+    }
+}
+@media (max-width: 410px) {
+    #drink{
+        font-size: 30px;
     }
 }
 

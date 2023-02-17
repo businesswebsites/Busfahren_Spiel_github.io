@@ -6,29 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pyramide</title>
     <link rel="stylesheet" href="style.css">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="pyramide" onchange="check_pyramide()">
-        <div id="firstrow">
-            <img id="card1_row1" src="card background.jpg" onclick="change_pyramide()" alt="">
+        <div id="schluck">
+            4 Schlücke
+            <div id="firstrow">
+                <img id="card1_row1" src="card background.jpg" onclick="change_pyramide()" alt="">
+            </div>
+        </div>
+        
+        <div id="schluck">
+            3 Schlücke
+            <div id="secondrow">
+                <img id="card1_row2" src="card background.jpg" onclick="change_pyramide()" alt="">
+                <img id="card2_row2" src="card background.jpg" onclick="change_pyramide()" alt="">
+            </div>
         </div>
     
-        <div id="secondrow">
-            <img id="card1_row2" src="card background.jpg" onclick="change_pyramide()" alt="">
-            <img id="card2_row2" src="card background.jpg" onclick="change_pyramide()" alt="">
+        <div id="schluck">
+            2 Schlücke
+            <div id="thirdrow">
+                <img id="card1_row3" src="card background.jpg" onclick="change_pyramide()" alt="">
+                <img id="card2_row3" src="card background.jpg" onclick="change_pyramide()" alt="">
+                <img id="card3_row3" src="card background.jpg" onclick="change_pyramide()" alt="">
+            </div>
         </div>
     
-        <div id="thirdrow">
-            <img id="card1_row3" src="card background.jpg" onclick="change_pyramide()" alt="">
-            <img id="card2_row3" src="card background.jpg" onclick="change_pyramide()" alt="">
-            <img id="card3_row3" src="card background.jpg" onclick="change_pyramide()" alt="">
-        </div>
-    
-        <div id="fourthrow">
-            <img id="card1_row4" src="card background.jpg" onclick="change_pyramide()" alt="">
-            <img id="card2_row4" src="card background.jpg" onclick="change_pyramide()"  alt="">
-            <img id="card3_row4" src="card background.jpg" onclick="change_pyramide()" alt="">
-            <img id="card4_row4" src="card background.jpg" onclick="change_pyramide()" alt="">
+        <div id="schluck">
+            1 Schluck
+            <div id="fourthrow">
+                <img id="card1_row4" src="card background.jpg" onclick="change_pyramide()" alt="">
+                <img id="card2_row4" src="card background.jpg" onclick="change_pyramide()"  alt="">
+                <img id="card3_row4" src="card background.jpg" onclick="change_pyramide()" alt="">
+                <img id="card4_row4" src="card background.jpg" onclick="change_pyramide()" alt="">
+            </div>
         </div>
     
         <div id="btn_final">

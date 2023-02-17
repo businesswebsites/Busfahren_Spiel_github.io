@@ -118,3 +118,13 @@ img:hover{
         gap: 2%;
     }
 }
+
+#schluck, #schluck{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    border: 2px solid black;
+    margin: 2px;
+    font-family: 'Bangers', cursive;
+    padding: 5px;
+}

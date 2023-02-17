@@ -80,3 +80,41 @@ h1{
     background-color: black;
     height: 250px;
 }
+#firstrow img, #secondrow img, #thirdrow img, #fourthrow img{
+    width: 100px;
+    height: 150px;
+}
+#firstrow, #secondrow, #thirdrow, #fourthrow{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 1%;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+#btn_final{
+    display: flex;
+    justify-content: center;
+}
+
+#btn_final button{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin: 50px;
+    visibility: hidden;
+}
+
+@media (max-width: 420px) {
+    #firstrow img, #secondrow img, #thirdrow img, #fourthrow img{
+        width: 80px;
+        height: 130px;
+    }
+    #firstrow, #secondrow, #thirdrow, #fourthrow{
+        gap: 2%;
+    }
+}

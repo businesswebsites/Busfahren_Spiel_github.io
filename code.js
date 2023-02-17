@@ -46,6 +46,7 @@ function buzzer1(){
         maincard.src = sym + "_" + random_number.toString() + ".png";
 
         //if player is wrong 
+        //change header text
         if(sym == "pik" || sym =="kreuz"){
             h1.innerHTML = "Falsch! Trink!";
         }else{
@@ -66,6 +67,7 @@ function buzzer1(){
         maincard.src = sym + "_" + random_number.toString() + ".png";
         //change last card
         card_1.src = lost_symbol[0] + "_" + lost_numbers[0] + ".png";
+        //change header text 
         if(lost_numbers[0] > random_number){
             h1.innerHTML = "Falsch! Trink!";
         }else{
@@ -88,6 +90,7 @@ function buzzer1(){
         //change last card
         card_2.src = lost_symbol[1] + "_" + lost_numbers[1] + ".png";
         lost_numbers.sort(function(a, b){return a-b});
+        //change header text 
         if(random_number < lost_numbers[1] && random_number > lost_numbers[0]){
             h1.innerHTML = "Innerhalb! Richtig!";
         }else{
@@ -106,7 +109,7 @@ function buzzer1(){
         maincard.src = sym + "_" + random_number + ".png";
         //change last card
         card_3.src = lost_symbol[2] + "_" + lost_numbers[2] + ".png";
-
+        //change header text
         if(sym == lost_symbol[1] || sym==lost_symbol[0] || sym == lost_symbol[2]){
             h1.innerHTML = "Dabei! Richtig!";
         }else{
@@ -145,13 +148,12 @@ function buzzer2(){
         lost_symbol.push(sym);
         //change maincard
         maincard.src = sym + "_" + random_number.toString() + ".png";
-
+        //chnage header text
         if(sym == "caro" || sym =="herz"){
             h1.innerHTML = "Falsch! Trink!";
         }else{
             h1.innerHTML = "Schwarz! Richtig!";
         }
-        
     }
     else if(buzzer_2.innerHTML == "tiefer" && counter == 1){
         counter++;
@@ -167,13 +169,12 @@ function buzzer2(){
         maincard.src = sym + "_" + random_number.toString() + ".png";
         //change last card
         card_1.src = lost_symbol[0] + "_" + lost_numbers[0] + ".png";
-
+        //change header text
         if(lost_numbers[0] < random_number){
             h1.innerHTML = "Falsch! Trink!";
         }else{
             h1.innerHTML = "Tiefer! Richtig!";
         }
-
     }
     else if(buzzer_2.innerHTML == "außerhalb" && counter == 2){
         counter++;
@@ -192,6 +193,7 @@ function buzzer2(){
         card_2.src = lost_symbol[1] + "_" + lost_numbers[1] + ".png";
 
         lost_numbers.sort(function(a, b){return a-b});
+        //change header text
         if(random_number > lost_numbers[1] || random_number < lost_numbers[0]){
             h1.innerHTML = "Außerhalb! Richtig!";
         }else{
@@ -209,7 +211,7 @@ function buzzer2(){
         maincard.src = sym + "_" + random_number + ".png";
         //change last card
         card_3.src = lost_symbol[2] + "_" + lost_numbers[2] + ".png";
-
+        //change header text
         if(sym != lost_symbol[1] && sym !=lost_symbol[0] && sym != lost_symbol[2]){
             h1.innerHTML = "Nicht dabei! Richtig!";
         }else{
@@ -231,8 +233,32 @@ function buzzer2(){
             first_round.removeChild(document.getElementById("choose"));
 
         });
-
         buttons.appendChild(start_button);
+    }
+}
 
+//pyramide
+//fourth row
+let card1_row4 = document.getElementById("card1_row4");
+let card2_row4 = document.getElementById("card2_row4");
+let card3_row4 = document.getElementById("card3_row4");
+let card1_row1 = document.getElementById("card1_row1");
+let card_bg = "card background.jpg";
+
+//function to change background to random card
+function change_pyramide(){
+        //get sym and number of the new card to change 
+        let sym = get_symbol(symbols);
+        let num = get_random_number();
+        //try to get id of the card to change by click 
+        let id = event.target.id
+        document.getElementById(id).src = sym + "_" + num.toString() + ".png";
+
+        //if(id !== "card1_row4")
+}
+
+function check_pyramide(){
+    if(card1_row1.src.toString() !== card_bg){
+        document.getElementById("busfahren").style.visibility = "visible";
     }
 }

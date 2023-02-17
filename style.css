@@ -117,6 +117,10 @@ img:hover{
     #firstrow, #secondrow, #thirdrow, #fourthrow{
         gap: 2%;
     }
+    #bus img{
+        width: 50px;
+        height:100px;
+    }
 }
 
 @media (max-width: 420px) and (max-height: 900px) {
@@ -148,3 +152,16 @@ img:hover{
     padding: 4px;
     -webkit-text-stroke: 1px black;
 }
+@media (max-width: 420px) and (max-height: 900px) {
+    #bus_row7 img, #bus_row6 img, #bus_row5 img, #bus_row4 img, #bus_row3 img, #bus_row2 img, #bus_row1 img{
+        width: 40px;
+        height: 90px;
+    }
+    #bus_row7, #bus_row6, #bus_row5, #bus_row4, #bus_row3, #bus_row2, #bus_row1{
+        gap: 2%;
+        display: flex;
+        justify-content: center;
+        margin-top: 3px;
+    }
+}
+

@@ -125,6 +125,11 @@ function buzzer1(){
         start_button.style.fontSize = "50px";
         start_button.style.borderRadius = "10px";
         start_button.style.padding = "10px";
+
+        start_button.addEventListener("click", ()=>{
+            //location.href = "pyramide.html"
+            window.location.assign("pyramide.html")
+        })
         start_button.addEventListener("click", ()=>{
             first_round.removeChild(document.getElementById("first_round_values"));
             first_round.removeChild(document.getElementById("playground"));
@@ -226,6 +231,11 @@ function buzzer2(){
         start_button.style.fontSize = "50px";
         start_button.style.borderRadius = "10px";
         start_button.style.padding = "10px";
+
+        start_button.addEventListener("click", ()=>{
+            //location.href = "pyramide.html"
+            window.location.assign("pyramide.html")
+        })
 
         start_button.addEventListener("click", ()=>{
             first_round.removeChild(document.getElementById("first_round_values"));

@@ -125,6 +125,7 @@ function buzzer1(){
         start_button.style.fontSize = "50px";
         start_button.style.borderRadius = "10px";
         start_button.style.padding = "10px";
+        start_button.style.border = "2px solid black";
 
         start_button.addEventListener("click", ()=>{
             //location.href = "pyramide.html"
@@ -137,6 +138,8 @@ function buzzer1(){
 
         });
         buttons.appendChild(start_button);
+        buttons.style.display = "flex";
+        buttons.style.justifyContent ="center";
     }
 }
 function buzzer2(){
@@ -231,6 +234,7 @@ function buzzer2(){
         start_button.style.fontSize = "50px";
         start_button.style.borderRadius = "10px";
         start_button.style.padding = "10px";
+        start_button.style.border = "2px solid black";
 
         start_button.addEventListener("click", ()=>{
             //location.href = "pyramide.html"
@@ -244,6 +248,8 @@ function buzzer2(){
 
         });
         buttons.appendChild(start_button);
+        buttons.style.display = "flex";
+        buttons.style.justifyContent ="center";
     }
 }
 

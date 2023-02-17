@@ -146,4 +146,5 @@ img:hover{
     margin: 2px;
     font-family: 'Bangers', cursive;
     padding: 4px;
+    -webkit-text-stroke: 1px black;
 }

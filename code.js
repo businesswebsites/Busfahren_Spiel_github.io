@@ -261,8 +261,20 @@ let card3_row4 = document.getElementById("card3_row4");
 let card1_row1 = document.getElementById("card1_row1");
 let card_bg = "card background.jpg";
 
+function button_styling(element, text){
+        element.innerText = text;
+        element.style.color = "black";
+        element.style.backgroundColor = "white";
+        element.style.fontSize = "50px";
+        element.style.borderRadius = "10px";
+        element.style.padding = "10px";
+        element.style.border = "2px solid black";
+}
+
 //function to change background to random card
+let pyramide_counter = 0;
 function change_pyramide(){
+    pyramide_counter++;
         //get sym and number of the new card to change 
         let sym = get_symbol(symbols);
         let num = get_random_number();
@@ -270,7 +282,58 @@ function change_pyramide(){
         let id = event.target.id
         document.getElementById(id).src = sym + "_" + num.toString() + ".png";
 
-        //if(id !== "card1_row4")
+        if(pyramide_counter == 10){
+            setTimeout(function(){
+                //remove fourth row
+                let pyramide = document.getElementById("pyramide");
+                document.getElementById("fourthrow").removeChild(document.getElementById("card1_row4"));
+                document.getElementById("fourthrow").removeChild(document.getElementById("card2_row4"));
+                document.getElementById("fourthrow").removeChild(document.getElementById("card3_row4"));
+                document.getElementById("fourthrow").removeChild(document.getElementById("card4_row4"));
+                pyramide.removeChild(document.getElementById("schluck_4"));
+
+                //remove third row
+                document.getElementById("thirdrow").removeChild(document.getElementById("card1_row3"));
+                document.getElementById("thirdrow").removeChild(document.getElementById("card2_row3"));
+                document.getElementById("thirdrow").removeChild(document.getElementById("card3_row3"));
+                pyramide.removeChild(document.getElementById("schluck_3"));
+
+                //remove second row
+                document.getElementById("secondrow").removeChild(document.getElementById("card1_row2"));
+                document.getElementById("secondrow").removeChild(document.getElementById("card2_row2"));
+                pyramide.removeChild(document.getElementById("schluck_2"));
+                //remove first row
+                document.getElementById("firstrow").removeChild(document.getElementById("card1_row1"));
+
+                pyramide.removeChild(document.getElementById("schluck_1"));
+                //change styles
+                
+                let new_bus = document.createElement("button");
+                let old_bus = document.createElement("button");
+
+                button_styling(new_bus, "Neuer Bus");
+                button_styling(old_bus, "Alter Bus");
+                new_bus.addEventListener("click", ()=>{
+                    //location.href = "pyramide.html"
+                    window.location.assign("bus.html")
+                })
+                pyramide.appendChild(new_bus);
+                pyramide.appendChild(old_bus);
+                pyramide.style.gap = "2%";
+                
+                
+            }, 5000);
+        }
+}
+let bus_counter = 0;
+function change_bus(){
+    bus_counter++;
+    //get sym and number of the new card to change 
+    let sym = get_symbol(symbols);
+    let num = get_random_number();
+    //try to get id of the card to change by click 
+    let id = event.target.id
+    document.getElementById(id).src = sym + "_" + num.toString() + ".png";
 }
 
 function check_pyramide(){
